@@ -22,16 +22,13 @@
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/auth": "^11.0|^12.0|^13.0",
-        "illuminate/database": "^11.0|^12.0|^13.0",
-        "illuminate/notifications": "^11.0|^12.0|^13.0",
-        "illuminate/support": "^11.0|^12.0|^13.0"
+        "laravel/framework": "^11.0|^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
         "laravel/pint": "^1.24",
-        "orchestra/testbench": "^10.0|^11.0",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
         "pestphp/pest": "^3.0|^4.0",
         "pestphp/pest-plugin-laravel": "^3.0|^4.0"
     },
@@ -60,13 +57,13 @@
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        },
         "laravel": {
             "providers": [
                 "JeffersonGoncalves\\Admin\\AdminServiceProvider"
-            ],
-            "aliases": {
-                "Admin": "JeffersonGoncalves\\Admin\\Facades\\Admin"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

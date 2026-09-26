@@ -13,4 +13,14 @@ class TestCase extends Orchestra
             AdminServiceProvider::class,
         ];
     }
+
+    protected function defineEnvironment($app): void
+    {
+        $app['config']->set('database.default', 'testing');
+    }
+
+    protected function defineDatabaseMigrations(): void
+    {
+        (include __DIR__.'/../database/migrations/create_admins_table.php.stub')->up();
+    }
 }
